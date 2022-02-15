@@ -55,49 +55,52 @@ class SimpleFraction {
                 this.denominator * b.denominator);
     }
 
-    @Override
-    public String toString() {
-        return numerator + "/" + denominator;
+    public void printFraction() {
+        System.out.println(numerator + "/" + denominator);
     }
 }
 
 
 public class Main {
     public static void main(String[] args) {
-        SimpleFraction a = new SimpleFraction(1,5);
-        SimpleFraction b = new SimpleFraction(10, 40);
-        SimpleFraction c = new SimpleFraction(30, 3);
-        SimpleFraction d = new SimpleFraction(1, 2);
-        SimpleFraction e = new SimpleFraction(2, 1);
-        SimpleFraction f = new SimpleFraction();
+        try {
+            SimpleFraction a = new SimpleFraction(1,5);
+            SimpleFraction b = new SimpleFraction(10, 40);
+            SimpleFraction c = new SimpleFraction(30, 3);
+            SimpleFraction d = new SimpleFraction(1, 2);
+            SimpleFraction e = new SimpleFraction(2, 1);
+            SimpleFraction f = new SimpleFraction();
 
-        SimpleFraction example0 = addFractions(f, f);
-        System.out.println(example0);
+            SimpleFraction example0 = addFractions(f, f);
+            example0.printFraction();
 
-        SimpleFraction example1 = addFractions(a, b);
-        System.out.println(example1);
+            SimpleFraction example1 = addFractions(a, b);
+            example1.printFraction();
 
-        SimpleFraction example2 = subtractFractions(c, a);
-        System.out.println(example2);
+            SimpleFraction example2 = subtractFractions(c, a);
+            example2.printFraction();
 
-        SimpleFraction example3 = multiplyFractions(a, c);
-        System.out.println(example3);
+            SimpleFraction example3 = multiplyFractions(a, c);
+            example3.printFraction();
 
-        SimpleFraction example4 = divideFractions(d, e);
-        System.out.println(example4);
+            SimpleFraction example4 = divideFractions(d, e);
+            example4.printFraction();
 
-        System.out.println();
+            System.out.println();
 
-        SimpleFraction example5 = a.addFraction(b);
-        System.out.println(example5);
+            SimpleFraction example5 = a.addFraction(b);
+            example5.printFraction();
 
-        SimpleFraction example6 = c.subtractFraction(a);
-        System.out.println(example6);
+            SimpleFraction example6 = c.subtractFraction(a);
+            example6.printFraction();
 
-        SimpleFraction example7 = a.multiplyFraction(c);
-        System.out.println(example7);
+            SimpleFraction example7 = a.multiplyFraction(c);
+            example7.printFraction();
 
-        SimpleFraction example8 = d.divideFraction(e);
-        System.out.println(example8);
+            SimpleFraction example8 = d.divideFraction(e);
+            example8.printFraction();
+        } catch (ArithmeticException e) {
+            System.out.println("Denominators must be != 0");
+        }
     }
 }
