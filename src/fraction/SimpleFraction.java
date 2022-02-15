@@ -18,13 +18,6 @@ public class SimpleFraction {
         this.denominator = denominator;
     }
 
-    public static SimpleFraction getMyFraction(Scanner scanner) {
-        System.out.println("Enter numerator:");
-        var numerator = scanner.nextDouble();
-        System.out.println("Enter denominator:");
-        var denominator = scanner.nextDouble();
-        return new SimpleFraction(numerator, denominator);
-    }
 
     public static SimpleFraction addFractions(SimpleFraction a, SimpleFraction b) {
         return new SimpleFraction(a.numerator * b.denominator + b.numerator * a.denominator,
